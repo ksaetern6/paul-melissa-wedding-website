@@ -20,6 +20,10 @@ app.get('/', (req, res) => {
   res.render('index', { title: 'Home', message: 'Hello World!' });
 });
 
+app.get('/upload', (req, res) => {
+  res.render('upload', { title: 'Upload' });
+});
+
 app.listen(port, () => {
   // console.log('Server is up on port', port);
 });

@@ -2,19 +2,14 @@ doctype html
 html(lang='en')
   head
     title= title
-    link(rel="stylesheet", href="/css/index.css")
-    link(rel="stylesheet", href="/bootstrap/dist/css/bootstrap.min.css")
-
+    include ./partials/stylesheet-partial
 
   body
-    //- div.bg
-    //- p.red= message
     div.page-header
       div.centered
         h1 Wedding Website
+        // nav-bar
     include ./partials/header
     
-    script(src='/jquery/dist/jquery.min.js')
-    script(src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js")
-    script(src='/bootstrap/dist/js/bootstrap.min.js')
+    include ./partials/scripts-partial
 
