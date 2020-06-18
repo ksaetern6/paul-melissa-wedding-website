@@ -1,9 +1,17 @@
 
-.bg {
+/* body {
     background-image: url("/images/homepage.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-}
+} */
 .red {
     color: red;
+}
+.header {
+    color: pink;
+}
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

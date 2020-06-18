@@ -3,23 +3,18 @@ html(lang='en')
   head
     title= title
     link(rel="stylesheet", href="/css/index.css")
-    link(rel="stylesheet", href="/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/bootstrap/dist/css/bootstrap.min.css")
+
+
   body
     //- div.bg
     //- p.red= message
-    nav.navbar.navbar-expand-lg.navbar-light.bg-transparent
-      a.navbar-brand(href="/") Navbar
-      button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
-        span.navbar-toggle-icon
-      div.collapse.navbar-collapse#navbarNav
-        ul.navbar-nav
-          li.nav-item.active
-            a.nav-link(href="/") Home
-            span.sr-only (current)
-          li.nav-item
-            a.nav-link(href="/") Features
-          li.nav-item
-            a.nav-link(href="/") Pricing
-          li.nav-item
-            a.nav-link.disabled(href="#") Disabled
+    div.page-header
+      div.centered
+        h1 Wedding Website
+    include ./partials/header
+    
+    script(src='/jquery/dist/jquery.min.js')
+    script(src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js")
+    script(src='/bootstrap/dist/js/bootstrap.min.js')
 

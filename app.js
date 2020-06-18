@@ -10,7 +10,10 @@ app.set('view engine', 'pug');
 
 // Static file path
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+// app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+// app.use(express.static(path.join(__dirname, 'node_modules/@popperjs')));
+// app.use(express.static(path.join(__dirname, 'node_modules/jquery')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 // Routes
 app.get('/', (req, res) => {
