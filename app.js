@@ -1,5 +1,17 @@
 const express = require('express');
 const path = require('path');
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './uploads/');
+  },
+  filename: (req, file, cb) => {
+    const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1E9)}`;
+    cb(null, `${file.originalname}-${uniqueSuffix}`);
+  },
+});
+const upload = multer({ storage });
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -24,6 +36,9 @@ app.get('/upload', (req, res) => {
   res.render('upload', { title: 'Upload' });
 });
 
+app.post('/upload', upload.single('uploaded-file'), (req, res) => {
+  console.log(req.file, req.body);
+});
 app.listen(port, () => {
   // console.log('Server is up on port', port);
 });

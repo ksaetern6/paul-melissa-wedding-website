@@ -7,9 +7,10 @@ html(lang="en")
     body
         include ./partials/header
         // content
-        form
+        form(action="/upload" enctype="multipart/form-data" method="post")
             div.form-group
-                input(type="file" class="form-control-file")
+                input(type="file" class="form-control-file" name="uploaded-file")
+                input.btn.btn-default(type="submit")
                 
 
         include ./partials/scripts-partial
