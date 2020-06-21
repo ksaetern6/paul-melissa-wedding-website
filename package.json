@@ -20,6 +20,7 @@
   "dependencies": {
     "@popperjs/core": "^2.4.2",
     "bootstrap": "^4.5.0",
+    "dropbox": "^5.1.0",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
     "multer": "^1.4.2",
