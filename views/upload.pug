@@ -6,5 +6,16 @@ html(lang="en")
 
     body
         include ./partials/header
+        // content
+        form
+            div.form-group
+                input(type="file" class="form-control-file")
+                
+
         include ./partials/scripts-partial
+        //- script.
+        //-     $(".custom-file-input").on("change", function() {
+        //-     var fileName = $(this).val().split("\\").pop();
+        //-     $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        //-     });
 
