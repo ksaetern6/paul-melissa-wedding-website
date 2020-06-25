@@ -75,24 +75,6 @@ app.post('/upload', upload.single('uploaded-file'), (req, res) => {
   //     workItems.push(file.slice(offset, offset + chunkSize));
   //   }
   // }
-
-  // fs.readFile(path.join(__dirname, `/uploads/${req.file.originalname}`), (err, contents) => {
-  //   if (err) {
-  //     console.log('Error', err);
-  //   }
-  //   dbx.filesUpload({ path: `/wedding-website-uploads/${req.file.originalname}`, contents })
-  //     .then((response) => {
-  //       res
-  //         .status(200)
-  //         .contentType('text/plain')
-  //         .end('File uploaded!');
-  //       console.log(response);
-  //     })
-  //     .catch((e) => {
-  //       console.log(e);
-  //     });
-  // });
-  // console.log(req.file, req.body);
 });
 app.listen(port, () => {
   // console.log('Server is up on port', port);

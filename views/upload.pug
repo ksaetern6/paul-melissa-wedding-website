@@ -1,16 +1,19 @@
 doctype html
-html(lang="en")
+html.h-100(lang="en")
     head
         title= title
         include ./partials/stylesheet-partial
 
-    body
+    body.h-100
         include ./partials/header
-        // content
-        form(action="/upload" enctype="multipart/form-data" method="post")
-            div.form-group
-                input(type="file" class="form-control-file" name="uploaded-file")
-                input.btn.btn-default(type="submit")
+        div.container.h-100
+            div.row.justify-content-center.align-items-center.h-100
+                div.jumbotron
+                    form(action="/upload" enctype="multipart/form-data" method="post")
+                        div.custom-file
+                            input(type="file" class="custom-file-input" name="uploaded-file")
+                            label.custom-file-label(for="customFile") Choose file
+                            input.btn.btn-block.btn-primary(type="submit")
                 
 
         include ./partials/scripts-partial
