@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/upload', (req, res) => {
-  res.render('upload', { title: 'Upload' });
+  res.render('upload', { title: 'Upload', message: 'Upload your file' });
 });
 
 app.post('/upload', upload.single('uploaded-file'), (req, res) => {
@@ -76,6 +76,11 @@ app.post('/upload', upload.single('uploaded-file'), (req, res) => {
   //   }
   // }
 });
+
+app.get('/registry', (req, res) => {
+  res.render('registry', { title: 'Registry' });
+});
+
 app.listen(port, () => {
   // console.log('Server is up on port', port);
 });

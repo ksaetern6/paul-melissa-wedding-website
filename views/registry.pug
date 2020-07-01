@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        title= title
+        include ./partials/stylesheet-partial
+
+    body
+        nav.navbar.navbar-expand-md.fixed-top.navbar-light.bg-light
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            div.collapse.navbar-collapse#navbarNav
+                ul.navbar-nav.mx-auto.navbar-active
+                    li.nav-item.text-center
+                        a.nav-link(href="/") Home
+                    li.nav-item.text-center
+                        a.nav-link(href="/upload") Upload
+                    li.nav-item.text-center
+                        a.nav-link.active(href="/registry") Registry
+                    li.nav-item.text-center
+                        a.nav-link(href="#") About
+        div.container.h-100
+            div.row.justify-content-center.align-items-center.h-100
+                div.registry-links
+                    p.index-message.text-center Registry
+                    //- <a href="https://www.amazon.com/wedding/share/MoJoWedding2020?_encoding=UTF8&amp;camp=1789&amp;creative=9325&amp;linkCode=ur2&amp;tag=storypodca-20&amp;linkId=2P4S6EY6B462X4AR" target="_blank" rel="noopener noreferrer" ><img src="/images/amazon-stock.jpg"></a>
+                    //- <a href="https://www.amazon.com/wedding/share/MoJoWedding2020?_encoding=UTF8&amp;camp=1789&amp;creative=9325&amp;linkCode=ur2&amp;tag=storypodca-20&amp;linkId=2P4S6EY6B462X4AR" target="_blank" rel="noopener noreferrer" ><img src="/images/target-stock.jpg"></a>
+                    img.img-responsive(src="/images/amazon-stock-scaled.jpg" width="250" height="250" border="1")
+                    img.img-responsive(src="/images/target-stock-scaled.jpg" width="250" height="250" border="1")
+
+    
+
+
+
+        include ./partials/scripts-partial
+
