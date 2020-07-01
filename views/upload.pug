@@ -1,25 +1,40 @@
 doctype html
-html.h-100(lang="en")
+html(lang="en")
     head
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         title= title
         include ./partials/stylesheet-partial
 
-    body.h-100
-        include ./partials/header
+    body
+        nav.navbar.navbar-expand-md.fixed-top.navbar-light.bg-light
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            div.collapse.navbar-collapse#navbarNav
+                ul.navbar-nav.mx-auto.navbar-active
+                    li.nav-item.text-center
+                        a.nav-link(href="/") Home
+                    li.nav-item.text-center
+                        a.nav-link.active(href="/upload") Upload
+                    li.nav-item.text-center
+                        a.nav-link(href="/") Registry
+                    li.nav-item.text-center
+                        a.nav-link(href="#") About
         div.container.h-100
             div.row.justify-content-center.align-items-center.h-100
-                div.jumbotron
-                    form(action="/upload" enctype="multipart/form-data" method="post")
-                        div.custom-file
-                            input(type="file" class="custom-file-input" name="uploaded-file")
-                            label.custom-file-label(for="customFile") Choose file
-                            input.btn.btn-block.btn-primary(type="submit")
-                
+                form(action="/upload" enctype="multipart/form-data" method="post")
+                    div.custom-file
+                        input(type="file" class="custom-file-input" name="uploaded-file" id="custom-file")
+                        label.custom-file-label(for="customFile") Choose file
+                        input.btn.btn-block.btn-primary(type="submit" id="submit-file")
+    
+
+
 
         include ./partials/scripts-partial
-        //- script.
-        //-     $(".custom-file-input").on("change", function() {
-        //-     var fileName = $(this).val().split("\\").pop();
-        //-     $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-        //-     });
+    script.
+     $('#custom-file').on('change', function (e) {
+         let fileName = e.target.files[0].name;
+         console.log(e)
+         $('.custom-file-label').html(fileName);
+     })
 

@@ -1,20 +1,29 @@
 
-/* body {
+body {
+    height: 100%;
     background-image: url("/images/bridge-scaled.png");
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-} */
-/* .header {
-    color: pink;
-} */
-/* body,html {
-    height: 100%;
-} */
-.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
- /* * {
-   outline: 1px solid red;
-  } */
+html {
+    height: 100%;
+}
+/* .navbar-light>div>ul>li>a:hover,
+.navbar-lights>div>ul>li>a:focus {
+    border-bottom: 5px solid;
+    color: red;
+} */
+.navbar-light .navbar-nav li>a.active{
+    border-bottom: 4px solid grey;
+}
+.navbar a {
+    font-family: Tahoma, Geneva, sans-serif !important;
+}
+.index-message {
+    font-family: Tahoma, Geneva, sans-serif !important;
+    font-weight: normal;
+    color: white;
+    font-size: 5vw;
+}
+

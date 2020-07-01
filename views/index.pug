@@ -1,15 +1,28 @@
 doctype html
 html(lang='en')
   head
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     title= title
     include ./partials/stylesheet-partial
 
   body
-    div.page-header
-      //- div.centered
-      //-   h1 #{'Paul & Melissa'}
-        // nav-bar
-    include ./partials/header
-    
+    nav.navbar.navbar-expand-md.fixed-top.navbar-light.bg-light
+      button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+      div.collapse.navbar-collapse#navbarNav
+          ul.navbar-nav.mx-auto.navbar-active
+              li.nav-item.text-center
+                  a.nav-link.active(href="/") Home
+              li.nav-item.text-center
+                  a.nav-link(href="/upload") Upload
+              li.nav-item.text-center
+                  a.nav-link(href="/") Registry
+              li.nav-item.text-center
+                  a.nav-link(href="#") About
+    div.container.h-100
+      div.row.justify-content-center.align-items-center.h-100
+        p.index-message Getting Married!
+
     include ./partials/scripts-partial
 
