@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/upload', (req, res) => {
-  res.render('upload', { title: 'Upload', message: 'Upload your file' });
+  res.render('upload', { title: 'Upload', message: '' });
 });
 
 app.post('/upload', upload.single('uploaded-file'), (req, res) => {
@@ -56,11 +56,12 @@ app.post('/upload', upload.single('uploaded-file'), (req, res) => {
   if (fileSize < uploadSizeLimit) {
     dbx.filesUpload({ path: `/wedding-website-uploads/${req.file.originalname}`, contents })
       .then((response) => {
-        res
-          .status(200)
-          .contentType('text/plain')
-          .end('File uploaded!');
-        console.log(response);
+        // res
+        //   .status(200)
+        //   .contentType('text/plain')
+        //   .end('File uploaded!');
+        // console.log(response);
+        res.status(200).render('upload', { title: 'Upload', message: 'File Uploaded' });
       })
       .catch((e) => {
         console.log(Error, e);
