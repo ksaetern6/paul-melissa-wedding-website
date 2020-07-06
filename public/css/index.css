@@ -33,17 +33,6 @@ html {
     color: white;
     font-size: 2vw;
 }
-.registry-links {
-    text-decoration:none;
-}
-.registry-links>img {
-    border-style: solid;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-/* .registry-links>img:hover {
-    opacity: 0.9;
-} */
 .index-div {
     display: flex;
     flex-direction: column;

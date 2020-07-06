@@ -48,34 +48,27 @@ app.post('/upload', upload.single('uploaded-file'), (req, res) => {
   const dbx = new Dropbox.Dropbox({ fetch, accessToken: process.env.DBX_API_KEY });
 
   //
-  const uploadSizeLimit = 150 * 1024 * 1024; // 150 MB
+  const uploadSizeLimit = 500 * 1024 * 1024; // 150 MB
   const contents = req.file.buffer;
   const fileSize = req.file.size;
 
   // Dropbox Upload file
-  if (fileSize < uploadSizeLimit) {
-    dbx.filesUpload({ path: `/wedding-website-uploads/${req.file.originalname}`, contents })
-      .then((response) => {
-        // res
-        //   .status(200)
-        //   .contentType('text/plain')
-        //   .end('File uploaded!');
-        // console.log(response);
-        res.status(200).render('upload', { title: 'Upload', message: 'File Uploaded' });
-      })
-      .catch((e) => {
-        console.log(Error, e);
-      });
+  try {
+    if (fileSize < uploadSizeLimit) {
+      dbx.filesUpload({ path: `/wedding-website-uploads/${req.file.originalname}`, contents })
+        .then((response) => {
+          res.status(200).render('upload', { title: 'Upload', message: 'File Uploaded' });
+        })
+        .catch((e) => {
+          throw Error(e);
+        });
+    } else {
+      throw Error('File size too large');
+    }
+  } catch (e) {
+    console.log(Error, e);
+    res.status(500).render('upload', { title: 'Upload', message: 'Upload Error' });
   }
-  // else {
-  //   const maxBlob = 8 * 1000 * 1000; // 8 MB
-  //   let workItems = [];
-  //   let offset = 0;
-  //   while (offset < fileSize) {
-  //     let chunkSize = Math.min(maxBlox, fileSize - offset);
-  //     workItems.push(file.slice(offset, offset + chunkSize));
-  //   }
-  // }
 });
 
 app.get('/registry', (req, res) => {
