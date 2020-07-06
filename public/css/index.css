@@ -1,8 +1,8 @@
 
 body {
     height: 100%;
-    background-image: url("/images/bridge-scaled.png");
-    background-position: center;
+    background-image: url("/images/image-1-scaled.jpeg");
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -14,17 +14,24 @@ html {
     border-bottom: 5px solid;
     color: red;
 } */
-.navbar-light .navbar-nav li>a.active{
-    border-bottom: 4px solid grey;
+.navbar-dark .navbar-nav li>a.active{
+    border-bottom: 4px solid whitesmoke;
 }
 .navbar a {
     font-family: Tahoma, Geneva, sans-serif !important;
+    font-size: large;
 }
-.index-message {
+.index-message-large {
     font-family: Tahoma, Geneva, sans-serif !important;
-    font-weight: normal;
+    font-weight: lighter;
     color: white;
     font-size: 5vw;
+}
+.index-message-md {
+    font-family: Tahoma, Geneva, sans-serif !important;
+    font-weight: lighter;
+    color: white;
+    font-size: 2vw;
 }
 .registry-links {
     text-decoration:none;
@@ -37,4 +44,17 @@ html {
 /* .registry-links>img:hover {
     opacity: 0.9;
 } */
+.index-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.index-div-row {
+    text-align: center;
+}
+.index-div p {
+    color: white;
 
+}

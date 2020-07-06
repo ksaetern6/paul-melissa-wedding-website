@@ -1,13 +1,13 @@
 doctype html
 html(lang='en')
   head
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    //- <meta name="viewport" content="width=device-width, initial-scale=1">
 
     title= title
     include ./partials/stylesheet-partial
 
   body
-    nav.navbar.navbar-expand-md.fixed-top.navbar-light.bg-light
+    nav.navbar.navbar-expand-md.fixed-top.navbar-dark.bg-transparent
       button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
           span.navbar-toggler-icon
       div.collapse.navbar-collapse#navbarNav
@@ -20,9 +20,14 @@ html(lang='en')
                   a.nav-link(href="/registry") Registry
               li.nav-item.text-center
                   a.nav-link(href="#") About
-    div.container.h-100
-      div.row.justify-content-center.align-items-center.h-100
-        p.index-message Getting Married!
-
+    //- div.container.h-100
+    //-   div.row.justify-content-center.align-items-center.h-100
+        p.index-message #{"Paul & Melissa"}
+        p.index-message August 29th, 2020
+    div.index-div
+      div.index-div-row
+        p.index-message-large #{"Paul & Melissa"}
+      div.index-div-row
+        p.index-message-md August 29th, 2020
     include ./partials/scripts-partial
 
