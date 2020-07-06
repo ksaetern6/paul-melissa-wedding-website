@@ -3,10 +3,12 @@ html(lang="en")
     head
     <meta name="viewport" content="width=device-width, initial-scale=1">
         title= title
+
+        link(rel="stylesheet", href="/css/upload.css")
         include ./partials/stylesheet-partial
 
     body
-        nav.navbar.navbar-expand-md.fixed-top.navbar-light.bg-light
+        nav.navbar.navbar-expand-md.fixed-top.navbar-dark.bg-transparent
             button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
                 span.navbar-toggler-icon
             div.collapse.navbar-collapse#navbarNav
@@ -18,10 +20,11 @@ html(lang="en")
                     li.nav-item.text-center
                         a.nav-link(href="/registry") Registry
                     li.nav-item.text-center
-                        a.nav-link(href="#") About
-        div.container.h-100
-            div.row.justify-content-center.align-items-center.h-100
+                        a.nav-link(href="/about") About
+        div.index-div
+            div.index-row
                 p.index-message.text-center= message
+            div.index-row
                 form(action="/upload" enctype="multipart/form-data" method="post")
                     div.custom-file
                         input(type="file" class="custom-file-input" name="uploaded-file" id="custom-file")

@@ -1,10 +1,12 @@
 
 body {
     height: 100%;
-    background-image: url("/images/image-1-scaled.png");
+    background-image: url("/images/image-2-scaled.png");
     background-position: center center;
-    background-size: no-repeat;
+    background-size: cover;
     background-repeat: no-repeat;
+    font-family: Tahoma, Geneva, sans-serif !important;
+
 }
 html {
     height: 100%;
@@ -33,28 +35,33 @@ html {
     color: white;
     font-size: 2vw;
 }
-.registry-links {
-    text-decoration:none;
-}
-.registry-links>img {
-    border-style: solid;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-/* .registry-links>img:hover {
-    opacity: 0.9;
-} */
 .index-div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 50%;
 }
 .index-div-row {
     text-align: center;
 }
-.index-div p {
+.about-div {
+    display: flex;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.about-div h3, p {
     color: white;
-
+}
+.about-column {
+    margin: 20px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.about-column-bride {
+    text-align: left;
+}
+.about-column-groom {
+    text-align: right;
 }

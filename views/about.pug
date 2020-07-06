@@ -4,7 +4,7 @@ html(lang='en')
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     title= title
-    link(rel="stylesheet", href="/css/index.css")
+    link(rel="stylesheet", href="/css/about.css")
     include ./partials/stylesheet-partial
 
   body
@@ -14,17 +14,27 @@ html(lang='en')
       div.collapse.navbar-collapse#navbarNav
           ul.navbar-nav.mx-auto.navbar-active
               li.nav-item.text-center
-                  a.nav-link.active(href="/") Home
+                  a.nav-link(href="/") Home
               li.nav-item.text-center
                   a.nav-link(href="/upload") Upload
               li.nav-item.text-center
                   a.nav-link(href="/registry") Registry
               li.nav-item.text-center
-                  a.nav-link(href="/about") About
+                  a.nav-link.active(href="/about") About
+
     div.index-div
       div.index-div-row
         p.index-message-large #{"Paul & Melissa"}
-      div.index-div-row
-        p.index-message-md August 29th, 2020
+    div.about-div
+        //- p.index-message-md August 29th, 2020
+        div.about-column
+          div.about-column-groom
+            h3 Groom Full Name
+            p About text goes here
+        div.about-column
+          div.about-column-bride
+            h3 Bride Full Name
+            p About text goes here
+
     include ./partials/scripts-partial
 
