@@ -17,24 +17,35 @@ html(lang='en')
                   a.nav-link(href="/") Home
               li.nav-item.text-center
                   a.nav-link(href="/upload") Upload
-              li.nav-item.text-center
-                  a.nav-link(href="/registry") Registry
+              li.nav-item.text-center.dropdown
+                  a.nav-link.dropdown-toggle(href="/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Registry
+                  div.dropdown-menu(aria-labelledby="navbarDropdown")
+                    a.dropdown-item(href="https://www.amazon.com/wedding/share/MoJoWedding2020?_encoding=UTF8&amp;camp=1789&amp;creative=9325&amp;linkCode=ur2&amp;tag=storypodca-20&amp;linkId=2P4S6EY6B462X4AR" target="_blank") Amazon
+                    a.dropdown-item(href="https://www.target.com/gift-registry/giftgiver?registryId=0f9d9ead3fc54e2e8045d0074950c8e9&lnk=registry_custom_url" target="_blank") Target
               li.nav-item.text-center
                   a.nav-link.active(href="/about") About
 
     div.index-div
       div.index-div-row
-        p.index-message-large #{"Paul & Melissa"}
+        p.index-message-md #{"Paul and Melissa’s Love Story"}
     div.about-div
-        //- p.index-message-md August 29th, 2020
-        div.about-column
-          div.about-column-groom
-            h3 Groom Full Name
-            p About text goes here
-        div.about-column
-          div.about-column-bride
-            h3 Bride Full Name
-            p About text goes here
-
+      div.about-column
+        div.about-column-groom
+          p Paul and Melissa first met in middle school in Mrs. Smithsons english class. Their relationship grew over the years. Paul was part of Melissa’s Quinceañera, although Paul started to develop feelings for Melissa, but she felt she wasn't ready at that time.
+          p Paul was patient and waited to ask her to Prom their senior year of high school. They kissed  (Melissa’s first kiss)  and they fell in love that year.  They dated for a short time but they took different paths after high school and the relationship ended.
+          p But when destiny brought them together again they gave themselves a second chance.  Their love grew stronger and they became inseparable.  They both completed their Bachelors degree at Chico State University.  They share the same goals to succeed in everything they do and support each other in their careers.  They also share their love for animals and have started a family with two birds #{"(Ezzy & Piña)"} a cat (Zoe) and a puppy (Remington). 
+          p Over the last eight years they have shared many wonderful moments, trips and memories.  Paul proposed in February of 2019 and they planned for a long engagement to have the wedding of their dreams.  Although during this unprecedented time of COVID-19 has been difficult, they have come to realize that life is short.  They could not imagine their lives without each other and have decided to write the next chapter of their love story as husband and wife.  
+          p After their wedding, Paul and Melissa will be moving to Tucson, Arizona in the pursuit of Melissa’s career as a Veterinarian.
+          p We hope that  you are able join us virtually by clicking the link _____ to witness their exchange of vows as they become Husband and Wife.  We will be sharing information on the virtual connection soon. We will plan a reception to gather and celebrate with all of our family and friends next year, as soon as this pandemic is under control and it is safe for everyone. More information to come on that fiesta as well.
+          p We would love and appreciate if you could send a  personal message to Paul and Melissa to be viewed on their wedding day.  You may make a short video of yourself and upload it to the #[a(href="/upload") Upload] tab above, or you can email them at pcjandmm@gmail.com.
+      div.about-column
+        div.about-column-bride
+          p Paul y Melissa se conocieron en primero de secundaria y desde el principio de su amistad disfrutaban de su compañía y se aconsejaban mutuamente.   A través de los años la amistad creció y Paul fue parte de la quinceañera de Melissa, fue en ese momento que iniciaron los sentimientos de Paul hacia Melissa pero ella no estaba preparada.
+          p Paul fue muy paciente y en su último año de preparatoria invito a Melissa al baile de graduación, fue allí cuando Melissa recibió su primer beso y se enamoraron.  Su noviazgo fue corto ya que tomaron diferentes caminos al graduarse de preparatoria y la relacion termino.
+          p Pero el destino los volvió a unir dos años después y se dieron una segunda oportunidad.  Su amor fortalcio y desde entonces han estado inseparables  Los dos se graduaron de la Universidad de Chico en California.  Comparten las mismas metas de sobresalir en sus carreras y se apoyan mutuamente.    También comparten el amor por los animales y tienen varias mascotas, dos periquitos (Ezze y Piña) una gatita (Zoe) y un perrito (Remington). 
+          p A través de los últimos ocho años han compartido muchos bellos recuerdos, viajes y memorias.  Paul  hizo la propuesta de  matrimonio en  febrero del 2019 y planeaban un largo compromiso y ahorrar para la boda de sus sueños, pero en estos tiempos sin precedentes de COVID-19 han realizado que la vida es corta.  No pueden imaginarse la vida sin el uno con el otro y han decidido escribir el siguiente capítulo de su historia de amor como marido y mujer.  
+          p Después del matrimonio, Paul y Melissa se van a mudar a Tucson Arizona para que Melissa continúe con sus estudios y carrera Veterinaria. 
+          p Nada nos daría más gusto de que nos acompañen virtualmente  por medio del enlace de arriba de esta página, para presenciar el enlace matrimonial.  Esperamos reunirnos el próximo año en una recepción para celebrar su matrimonio.  
+          p Si no es mucha molestia, nos encantaría que nos enviaron un mensaje para los novios.  Pueden hacer un corto video y #[a(href="/upload") subirlo] en donde indica arroba o puede enviarlo por correo electrónico a pcjandmm@gmail.com
     include ./partials/scripts-partial
 
