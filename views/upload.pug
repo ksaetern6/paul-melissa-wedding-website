@@ -17,8 +17,11 @@ html(lang="en")
                         a.nav-link(href="/") Home
                     li.nav-item.text-center
                         a.nav-link.active(href="/upload") Upload
-                    li.nav-item.text-center
-                        a.nav-link(href="/registry") Registry
+                    li.nav-item.text-center.dropdown
+                        a.nav-link.dropdown-toggle(href="/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Registry
+                        div.dropdown-menu(aria-labelledby="navbarDropdown")
+                            a.dropdown-item(href="https://www.amazon.com/wedding/share/MoJoWedding2020?_encoding=UTF8&amp;camp=1789&amp;creative=9325&amp;linkCode=ur2&amp;tag=storypodca-20&amp;linkId=2P4S6EY6B462X4AR" target="_blank") Amazon
+                            a.dropdown-item(href="https://www.target.com/gift-registry/giftgiver?registryId=0f9d9ead3fc54e2e8045d0074950c8e9&lnk=registry_custom_url" target="_blank") Target
                     li.nav-item.text-center
                         a.nav-link(href="/about") About
         div.index-div

@@ -4,7 +4,7 @@ html(lang="en")
     <meta name="viewport" content="width=device-width, initial-scale=1">
         title= title
         
-        link(rel="stylesheet", href="/css/index.css")
+        link(rel="stylesheet", href="/css/registry.css")
         include ./partials/stylesheet-partial
 
     body
@@ -21,15 +21,15 @@ html(lang="en")
                         a.nav-link.active(href="/registry") Registry
                     li.nav-item.text-center
                         a.nav-link(href="/about") About
-        div.container.h-100
-            div.row.justify-content-center.align-items-center.h-100
-                div.registry-links
-                    p.index-message.text-center Registry
-                    //- <a href="https://www.amazon.com/wedding/share/MoJoWedding2020?_encoding=UTF8&amp;camp=1789&amp;creative=9325&amp;linkCode=ur2&amp;tag=storypodca-20&amp;linkId=2P4S6EY6B462X4AR" target="_blank" rel="noopener noreferrer" ><img src="/images/amazon-stock.jpg"></a>
-                    //- <a href="https://www.amazon.com/wedding/share/MoJoWedding2020?_encoding=UTF8&amp;camp=1789&amp;creative=9325&amp;linkCode=ur2&amp;tag=storypodca-20&amp;linkId=2P4S6EY6B462X4AR" target="_blank" rel="noopener noreferrer" ><img src="/images/target-stock.jpg"></a>
-                    img.img-responsive(src="/images/amazon-stock-scaled.jpg" width="250" height="250" border="1")
-                    img.img-responsive(src="/images/target-stock-scaled.jpg" width="250" height="250" border="1")
 
+        //- https://www.amazon.com/wedding/share/MoJoWedding2020?_encoding=UTF8&amp;camp=1789&amp;creative=9325&amp;linkCode=ur2&amp;tag=storypodca-20&amp;linkId=2P4S6EY6B462X4AR
+        //- https://www.amazon.com/wedding/share/MoJoWedding2020?_encoding=UTF8&amp;camp=1789&amp;creative=9325&amp;linkCode=ur2&amp;tag=storypodca-20&amp;linkId=2P4S6EY6B462X4AR
+        div.index-div
+            div.index-div-row
+                a(href="https://www.amazon.com/wedding/share/MoJoWedding2020?_encoding=UTF8&amp;camp=1789&amp;creative=9325&amp;linkCode=ur2&amp;tag=storypodca-20&amp;linkId=2P4S6EY6B462X4AR" target="_blank") 
+                    button.btn.btn-warning.btn-lg.index-btn(type="button") Amazon
+                a(href="https://www.target.com/gift-registry/giftgiver?registryId=0f9d9ead3fc54e2e8045d0074950c8e9&lnk=registry_custom_url" target="_blank") 
+                    button.btn.btn-danger.btn-lg.index-btn(type="button") Target
     
 
 

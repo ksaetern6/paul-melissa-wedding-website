@@ -71,9 +71,9 @@ app.post('/upload', upload.single('uploaded-file'), (req, res) => {
   }
 });
 
-app.get('/registry', (req, res) => {
-  res.render('registry', { title: 'Registry' });
-});
+// app.get('/registry', (req, res) => {
+//   res.render('registry', { title: 'Registry' });
+// });
 
 app.get('/about', (req, res) => {
   res.render('about', { title: 'About Us' });
