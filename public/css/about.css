@@ -5,36 +5,8 @@ body {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: Georgia, serif;
     background-color: grey;
-
-}
-html {
-    height: 100%;
-}
-/* .navbar-light>div>ul>li>a:hover,
-.navbar-lights>div>ul>li>a:focus {
-    border-bottom: 5px solid;
-    color: red;
-} */
-.navbar-dark .navbar-nav li>a.active{
-    border-bottom: 4px solid whitesmoke;
-}
-.navbar a {
-    font-family: Georgia, serif;
-    font-size: large;
-}
-.index-message-large {
-    font-family: Georgia, serif;
-    font-weight: lighter;
-    color: white;
-    font-size: 5vw;
-}
-.index-message-md {
-    font-family: Georgia, serif;
-    font-weight: lighter;
-    color: white;
-    font-size: 2vw;
 }
 .index-div {
     display: flex;
@@ -43,25 +15,20 @@ html {
     justify-content: center;
     height: 25%;
 }
-.index-div-row {
-    text-align: center;
-}
 .about-div {
     display: flex;
-    /* flex-direction: column; */
     height: 75%;
     background-color: rgba(0, 0, 0, 0.3);
 }
 .about-div h3, p {
     color: white;
-    font-family: Georgia, serif;
-    /* margin: 20px; */
 }
 .about-column {
     margin: 20px;
     width: 50%;
     align-items: center;
     justify-content: center;
+    overflow: auto;
 }
 .about-column p {
     font-size: 16px;
@@ -74,6 +41,9 @@ html {
 }
 @media screen and (max-width: 600px) {
     div.about-column p {
-      font-size: 15px;
+        font-size: 15px;
+    }
+    div.index-div p.index-message-md {
+        font-size: 20px;
     }
   }

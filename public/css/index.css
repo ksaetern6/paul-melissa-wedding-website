@@ -3,47 +3,7 @@ body {
     height: 100%;
     background-image: url("/images/image-5-scaled.jpg");
     background-position: center center;
-    background-size: no-repeat;
+    background-size: cover;
     background-repeat: no-repeat;
     font-family: Georgia, serif !important;
-
-}
-html {
-    height: 100%;
-    font-family: Georgia, serif !important;
-}
-/* .navbar-light>div>ul>li>a:hover,
-.navbar-lights>div>ul>li>a:focus {
-    border-bottom: 5px solid;
-    color: red;
-} */
-.navbar-dark .navbar-nav li>a.active{
-    border-bottom: 4px solid whitesmoke;
-}
-.navbar a {
-    font-size: large;
-}
-.index-message-large {
-    font-weight: lighter;
-    color: white;
-    font-size: 5vw;
-}
-.index-message-md {
-    font-weight: lighter;
-    color: white;
-    font-size: 2vw;
-}
-.index-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-.index-div-row {
-    text-align: center;
-}
-.index-div p {
-    color: white;
-
 }

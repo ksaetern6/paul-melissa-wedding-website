@@ -8,45 +8,10 @@ body {
     font-family: Georgia, serif !important;
 
 }
-html {
-    height: 100%;
-}
-/* .navbar-light>div>ul>li>a:hover,
-.navbar-lights>div>ul>li>a:focus {
-    border-bottom: 5px solid;
-    color: red;
-} */
-.navbar-dark .navbar-nav li>a.active{
-    border-bottom: 4px solid whitesmoke;
-}
-.navbar a {
-    font-family: Georgia, serif !important;
-    font-size: large;
-}
-.index-message-large {
-    font-weight: lighter;
-    color: white;
-    font-size: 5vw;
-}
-.index-message-md {
-    font-weight: lighter;
-    color: white;
-    font-size: 4vw;
-}
 .index-div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 50%;
-}
-.index-message-sm {
-    font-weight: lighter;
-    color: white;
-    font-size: 2vw;
-}
-.about-div {
-    display: flex;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 0.3);
 }
