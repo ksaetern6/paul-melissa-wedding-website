@@ -44,6 +44,9 @@ app.get('/upload', (req, res) => {
 });
 
 app.post('/upload', upload.single('uploaded-file'), (req, res) => {
+  if (!req.file) {
+    res.status(500).render('upload', { title: 'Upload', message: 'Upload Error' });
+  }
   // API connection to Dropbox
   const dbx = new Dropbox.Dropbox({ fetch, accessToken: process.env.DBX_API_KEY });
 

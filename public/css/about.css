@@ -15,6 +15,9 @@ body {
     justify-content: center;
     height: 25%;
 }
+.index-div-row {
+    margin-top: 50px;
+}
 .about-div {
     display: flex;
     height: 75%;
